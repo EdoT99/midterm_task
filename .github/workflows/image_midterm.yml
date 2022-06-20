@@ -1,10 +1,14 @@
 name: Docker Image CI
 
+
 on:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+#env variables
+#env:
+#DOCKER_TOKEN: ${ {secrets.DOCKER_TOKEN} }
 
 jobs:
 
@@ -17,4 +21,4 @@ jobs:
     - name: Build the Docker image
       run: docker build docker/ --file docker/dockerfile --tag edot99/midterm_task
     - name: Push the image to DockerHub
-      run: docker login -u EdoT99 -p ${{ secrets.DOCKER_TOKEN }} && docker push 28246010408/midterm_task
+      run: docker login -u 28246010408 -p ${{ secrets.DOCKER_TOKEN }} && docker push 28246010408/midterm_task
