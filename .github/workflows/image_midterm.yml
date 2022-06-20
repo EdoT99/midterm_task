@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file docker/dockerfile --tag edot99/midterm_task
+      run: docker build docker/ --file docker/dockerfile --tag edot99/midterm_task
     - name: Push the image to DockerHub
-      run: docker login -u EdoT99 -p ${{ secrets.DOCKER_TOKEN }} && docker push EdoT99/midterm_task
+      run: docker login -u EdoT99 -p ${{ secrets.DOCKER_TOKEN }} && docker push edot99/midterm_task
