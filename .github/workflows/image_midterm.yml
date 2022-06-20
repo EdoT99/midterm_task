@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file dockerfile --tag EdoT99/midterm_task
     - name: Push the image to DockerHub
-      run: docker login -u EdoT99 -p ${{secrets.8a37708d-e765-478f-9519-d38adcfa7e6c}} && docker push EdoT99/midterm_task
+      run: docker login -u EdoT99 -p ${{secrets.DOCKER_TOKEN}} && docker push EdoT99/midterm_task
