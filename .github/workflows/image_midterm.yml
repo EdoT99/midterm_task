@@ -6,9 +6,6 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-#env variables
-#env:
-#DOCKER_TOKEN: ${ {secrets.DOCKER_TOKEN} }
 
 jobs:
 
