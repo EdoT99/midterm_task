@@ -1,6 +1,5 @@
 name: Docker Image CI
 
-
 on:
   push:
     branches: [ "master" ]
@@ -18,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build docker/ --file docker/dockerfile --tag edot99/midterm_task
     - name: Push the image to DockerHub
-      run: docker login -u 28246010408 -p ${{ secrets.DOCKER_TOKEN }} '&&'  docker push 28246010408/midterm_review
+      run: docker login -u 28246010408 -p ${{ secrets.DOCKER_TOKEN }} && docker push 28246010408/midterm_review
