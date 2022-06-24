@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build docker/ --file docker/Dockerfile --tag 28246010408/midterm_review
     - name: Push the image to DockerHub
-      run: docker login -u 28246010408 -p ${{ secrets.DOCKER_TOKEN }} && docker push 28246010408/midterm_review
+      run: (docker login -u 28246010408 -p ${{ secrets.DOCKER_TOKEN }}) && (docker push 28246010408/midterm_review)
